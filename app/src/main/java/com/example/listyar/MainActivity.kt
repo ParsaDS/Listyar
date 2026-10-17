@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import java.util.UUID
 
 internal data class Fitting(val name: String, val sizes: List<String>)
 internal data class Pipe(val name: String, val sizes: List<String>, val fittings: List<Fitting>)
