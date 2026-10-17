@@ -45,7 +45,7 @@ internal fun readLists(context: Context): List<SavedList> {
     val db = ListyarDatabase.get(context).writableDatabase
     migrateLegacyPreferences(context, db)
     val result = mutableListOf<SavedList>()
-    db.rawQuery("SELECT id, project, address, date, type FROM lists ORDER BY rowid DESC", null).use { cursor ->
+    db.rawQuery("SELECT id, project, address, date, type FROM lists ORDER BY rowid ASC", null).use { cursor ->
         while (cursor.moveToNext()) {
             val id = cursor.getString(0)
             val items = mutableListOf<Item>()
