@@ -438,7 +438,8 @@ private fun shareListImage(context: Context, l: SavedList) {
         canvas.translate(padding, 145f)
         layout.draw(canvas)
         canvas.restore()
-        val file = File(context.cacheDir, "listyar-${System.currentTimeMillis()}.jpg")
+        val imageDir = File(context.cacheDir, "list_images").apply { mkdirs() }
+        val file = File(imageDir, "listyar-${System.currentTimeMillis()}.jpg")
         file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.JPEG, 94, it) }
         bitmap.recycle()
         val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
