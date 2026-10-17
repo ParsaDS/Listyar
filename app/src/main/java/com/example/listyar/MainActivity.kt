@@ -1,6 +1,19 @@
 package com.example.listyar
 
 import android.content.Context
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.RectF
+import android.graphics.Typeface
+import android.text.Layout
+import android.text.StaticLayout
+import android.text.TextDirectionHeuristics
+import androidx.core.content.FileProvider
+import java.io.File
 import android.widget.Toast
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -135,7 +148,15 @@ private fun ListyarApp() {
                 "detail" -> {
                     val l=lists.firstOrNull { it.id==selectedId }
                     if(l==null) Text("لیست پیدا نشد.", Modifier.padding(pad))
-                    else DetailPage(Modifier.padding(pad),l,{tab=0;page="lists"},{editList(l)},{val cp=l.copy(id=UUID.randomUUID().toString(),date=today());lists.add(0,cp);saveAll();selectedId=cp.id;page="detail"})
+                    else DetailPage(
+                        Modifier.padding(pad), l,
+                        { tab=0; page="lists" },
+                        { editList(l) },
+                        { val cp=l.copy(id=UUID.randomUUID().toString(),date=today());lists.add(0,cp);saveAll();selectedId=cp.id;page="detail" },
+                        { copyListText(context,l) },
+                        { shareListText(context,l) },
+                        { shareListImage(context,l) }
+                    )
                 }
                 "settings" -> SettingsPage(Modifier.padding(pad),theme,{theme=it;context.getSharedPreferences("listyar_data",0).edit().putString("theme",it).apply()},
                     pipes,managePipe,{managePipe=it},newPipeName,{newPipeName=it},newSizes,{newSizes=it},newFitting,{newFitting=it},
@@ -256,15 +277,18 @@ private fun ListyarApp() {
     }
 }
 
-@Composable private fun DetailPage(m:Modifier,l:SavedList,onBack:()->Unit,onEdit:()->Unit,onCopy:()->Unit){
+@Composable private fun DetailPage(m:Modifier,l:SavedList,onBack:()->Unit,onEdit:()->Unit,onDuplicate:()->Unit,onCopyText:()->Unit,onShareText:()->Unit,onShareImage:()->Unit){
     Column(m.fillMaxSize().verticalScroll(rememberScrollState()).padding(22.dp),verticalArrangement=Arrangement.spacedBy(12.dp)){
         Text("جزئیات لیست",style=MaterialTheme.typography.headlineSmall,fontWeight=FontWeight.Bold)
         Text(l.project,style=MaterialTheme.typography.titleLarge,fontWeight=FontWeight.SemiBold)
         if(l.address.isNotBlank())Text("آدرس: "+l.address)
         Text("تاریخ: "+l.date);Text("نوع لیست: "+l.type);Text("اقلام",style=MaterialTheme.typography.titleMedium)
         l.items.forEachIndexed{i,it->Card(Modifier.fillMaxWidth()){Column(Modifier.padding(12.dp)){Text((i+1).toString()+". "+it.fitting+" "+it.size+" "+it.pipe);Text("تعداد: "+it.quantity)}}}
-        Button(onEdit,Modifier.fillMaxWidth()){Text("ویرایش لیست")}
-        OutlinedButton(onCopy,Modifier.fillMaxWidth()){Text("ساخت کپی از لیست")}
+        Button(onCopyText,Modifier.fillMaxWidth()){Text("کپی متن کوتاه برای پیامک")}
+        OutlinedButton(onShareText,Modifier.fillMaxWidth()){Text("اشتراک‌گذاری متن لیست")}
+        OutlinedButton(onShareImage,Modifier.fillMaxWidth()){Text("ساخت و اشتراک‌گذاری تصویر JPG")}
+        OutlinedButton(onEdit,Modifier.fillMaxWidth()){Text("ویرایش لیست")}
+        OutlinedButton(onDuplicate,Modifier.fillMaxWidth()){Text("ساخت کپی از لیست")}
         OutlinedButton(onBack,Modifier.fillMaxWidth()){Text("بازگشت")}
     }
 }
@@ -341,4 +365,93 @@ private fun ListyarApp() {
 
 private fun parseSizes(s:String)=s.split(',', '،',';','؛',' ','\n').map{it.trim()}.filter{it.isNotBlank()}.distinct()
 private fun today()=SimpleDateFormat("yyyy/MM/dd",Locale.US).format(Date())
+
+private fun listText(l: SavedList): String = buildList {
+    add("پروژه: ${l.project}")
+    l.items.forEach { item -> add("${item.fitting} ${item.size} ${item.pipe} - ${item.quantity} عدد") }
+}.joinToString("\n")
+
+private fun copyListText(context: Context, l: SavedList) {
+    val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    clipboard.setPrimaryClip(ClipData.newPlainText("Listyar", listText(l)))
+    Toast.makeText(context, "متن کوتاه لیست کپی شد.", Toast.LENGTH_SHORT).show()
+}
+
+private fun shareListText(context: Context, l: SavedList) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_SUBJECT, "لیست پروژه ${l.project}")
+        putExtra(Intent.EXTRA_TEXT, listText(l))
+    }
+    context.startActivity(Intent.createChooser(intent, "اشتراک‌گذاری متن لیست"))
+}
+
+private fun shareListImage(context: Context, l: SavedList) {
+    try {
+        val width = 1200
+        val padding = 64f
+        val body = buildString {
+            append("نام پروژه: ${l.project}\n")
+            append("آدرس: ${l.address.ifBlank { "ثبت نشده" }}\n")
+            append("تاریخ: ${l.date}\n")
+            append("نوع لیست: ${l.type}\n\n")
+            append("اقلام موردنیاز\n")
+            l.items.forEachIndexed { index, item ->
+                append("${index + 1}. ${item.fitting} ${item.size} ${item.pipe}  —  ${item.quantity} عدد")
+                if (index != l.items.lastIndex) append("\n")
+            }
+        }
+        val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = android.graphics.Color.rgb(35, 39, 44)
+            textSize = 40f
+            typeface = Typeface.create("sans-serif", Typeface.NORMAL)
+        }
+        val layout = StaticLayout.Builder.obtain(body, 0, body.length, textPaint, width - (padding * 2).toInt())
+            .setAlignment(Layout.Alignment.ALIGN_OPPOSITE)
+            .setTextDirection(TextDirectionHeuristics.RTL)
+            .setLineSpacing(10f, 1.12f)
+            .setIncludePad(true)
+            .build()
+        val height = (padding * 2 + 150f + layout.height).toInt().coerceAtLeast(600)
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        canvas.drawColor(android.graphics.Color.WHITE)
+        val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = android.graphics.Color.rgb(225, 229, 233)
+            style = Paint.Style.STROKE
+            strokeWidth = 3f
+        }
+        canvas.drawRoundRect(RectF(20f, 20f, width - 20f, height - 20f), 28f, 28f, borderPaint)
+        val titlePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = android.graphics.Color.rgb(25, 75, 120)
+            textSize = 54f
+            textAlign = Paint.Align.RIGHT
+            typeface = Typeface.create("sans-serif-medium", Typeface.BOLD)
+        }
+        canvas.drawText("لیست‌یار", width - padding, 94f, titlePaint)
+        val dividerPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = android.graphics.Color.rgb(225, 229, 233)
+            strokeWidth = 2f
+        }
+        canvas.drawLine(padding, 120f, width - padding, 120f, dividerPaint)
+        canvas.save()
+        canvas.translate(padding, 145f)
+        layout.draw(canvas)
+        canvas.restore()
+        val file = File(context.cacheDir, "listyar-${System.currentTimeMillis()}.jpg")
+        file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.JPEG, 94, it) }
+        bitmap.recycle()
+        val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
+        val sendIntent = Intent(Intent.ACTION_SEND).apply {
+            type = "image/jpeg"
+            putExtra(Intent.EXTRA_STREAM, uri)
+            putExtra(Intent.EXTRA_TEXT, "لیست پروژه: ${l.project}")
+            clipData = ClipData.newUri(context.contentResolver, "تصویر لیست‌یار", uri)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+        context.startActivity(Intent.createChooser(sendIntent, "اشتراک‌گذاری تصویر لیست"))
+    } catch (e: Exception) {
+        Toast.makeText(context, "ساخت تصویر انجام نشد: ${e.message ?: "خطای نامشخص"}", Toast.LENGTH_LONG).show()
+    }
+}
 
