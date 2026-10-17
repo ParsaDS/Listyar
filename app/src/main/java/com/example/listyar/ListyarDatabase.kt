@@ -241,9 +241,16 @@ internal fun parseBackup(json: String): ListyarBackup {
         }
         pipes.add(Pipe(o.optString("name"), sizes, fittings))
     }
-    require(lists.size <= 100_000 && pipes.size <= 10_000) { "تعداد داده‌های فایل غیرعادی است." }
-    require(pipes.all { it.name.isNotBlank() && it.sizes.isNotEmpty() }) { "اطلاعات نوع لوله در فایل کامل نیست." }
-    require(lists.all { it.project.isNotBlank() && it.items.all { item -> item.pipe.isNotBlank() && item.fitting.isNotBlank() && item.quantity.toIntOrNull()?.let { q -> q > 0 } == true } }) { "اطلاعات یکی از لیست‌ها در فایل کامل یا معتبر نیست." }
+    require(lists.size <= 100_000 && pipes.size in 1..10_000) { "تعداد داده‌های فایل غیرعادی است یا کاتالوگ لوله خالی است." }
+    require(lists.map { it.id }.distinct().size == lists.size) { "شناسه تکراری در لیست‌ها وجود دارد." }
+    require(pipes.map { it.name }.distinct().size == pipes.size) { "نام تکراری برای نوع لوله وجود دارد." }
+    require(pipes.all { pipe ->
+        pipe.name.isNotBlank() && pipe.sizes.isNotEmpty() &&
+            pipe.sizes.distinct().size == pipe.sizes.size &&
+            pipe.fittings.map { it.name }.distinct().size == pipe.fittings.size &&
+            pipe.fittings.all { fitting -> fitting.name.isNotBlank() && fitting.sizes.distinct().size == fitting.sizes.size }
+    }) { "اطلاعات نوع لوله یا اتصالات در فایل کامل یا معتبر نیست." }
+    require(lists.all { it.project.isNotBlank() && it.items.all { item -> item.pipe.isNotBlank() && item.fitting.isNotBlank() && item.size.isNotBlank() && item.quantity.toIntOrNull()?.let { q -> q > 0 } == true } }) { "اطلاعات یکی از لیست‌ها در فایل کامل یا معتبر نیست." }
     return ListyarBackup(lists, pipes)
 }
 
