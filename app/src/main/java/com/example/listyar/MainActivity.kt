@@ -401,7 +401,7 @@ private fun shareListImage(context: Context, l: SavedList) {
                 if (index != l.items.lastIndex) append("\n")
             }
         }
-        val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        val textPaint = android.text.TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
             color = android.graphics.Color.rgb(35, 39, 44)
             textSize = 40f
             typeface = Typeface.create("sans-serif", Typeface.NORMAL)
