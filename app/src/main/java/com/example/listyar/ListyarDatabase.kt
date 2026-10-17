@@ -147,22 +147,24 @@ private fun migrateLegacyPreferences(context: Context, db: SQLiteDatabase) {
         }
         if (!hasPipes) {
             val raw = prefs.getString("catalog", null)
-            if (!raw.isNullOrBlank()) {
+            val imported = if (raw.isNullOrBlank()) defaults() else {
                 val arr = JSONArray(raw)
-                val imported = mutableListOf<Pipe>()
-                for (i in 0 until arr.length()) {
-                    val o = arr.getJSONObject(i)
-                    val sizes = o.optJSONArray("sizes").toStringList()
-                    val fittingsArray = o.optJSONArray("fittings") ?: JSONArray()
-                    val fittings = mutableListOf<Fitting>()
-                    for (j in 0 until fittingsArray.length()) {
-                        val f = fittingsArray.getJSONObject(j)
-                        fittings.add(Fitting(f.optString("name"), (f.optJSONArray("sizes").toStringList()).ifEmpty { sizes }))
+                buildList {
+                    for (i in 0 until arr.length()) {
+                        val o = arr.getJSONObject(i)
+                        val sizes = o.optJSONArray("sizes").toStringList()
+                        val fittingsArray = o.optJSONArray("fittings") ?: JSONArray()
+                        val fittings = buildList {
+                            for (j in 0 until fittingsArray.length()) {
+                                val f = fittingsArray.getJSONObject(j)
+                                add(Fitting(f.optString("name"), f.optJSONArray("sizes").toStringList().ifEmpty { sizes }))
+                            }
+                        }
+                        add(Pipe(o.optString("name"), sizes, fittings))
                     }
-                    imported.add(Pipe(o.optString("name"), sizes, fittings))
                 }
-                replacePipesInsideTransaction(db, imported)
             }
+            replacePipesInsideTransaction(db, imported)
         }
         db.setTransactionSuccessful()
         prefs.edit().putBoolean("sqlite_migration_complete", true).apply()
