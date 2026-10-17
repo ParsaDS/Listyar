@@ -203,9 +203,37 @@ private fun ListyarApp() {
 
 @Composable private fun Drop(label:String,selected:String,options:List<String>,onSelect:(String)->Unit){
     var expanded by remember(label){mutableStateOf(false)}
-    Column{
-        OutlinedTextField(value=selected,onValueChange={},readOnly=true,label={Text(label)},modifier=Modifier.fillMaxWidth().clickable{expanded=true},singleLine=true)
-        DropdownMenu(expanded,{expanded=false}){options.forEach{v->DropdownMenuItem(text={Text(v)},onClick={onSelect(v);expanded=false})}}
+    Box(Modifier.fillMaxWidth()) {
+        OutlinedTextField(
+            value = selected,
+            onValueChange = {},
+            readOnly = true,
+            label = { Text(label) },
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) }
+        )
+        // Place a transparent click target above the read-only text field.
+        // This avoids touch events being consumed by TextField on some devices.
+        Box(
+            Modifier
+                .matchParentSize()
+                .clickable(enabled = options.isNotEmpty()) { expanded = true }
+        )
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false }
+        ) {
+            options.forEach { value ->
+                DropdownMenuItem(
+                    text = { Text(value) },
+                    onClick = {
+                        onSelect(value)
+                        expanded = false
+                    }
+                )
+            }
+        }
     }
 }
 
