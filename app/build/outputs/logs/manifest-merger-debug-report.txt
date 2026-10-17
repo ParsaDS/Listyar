@@ -1,0 +1,310 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.compose.material3:material3-android:1.3.2] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6077316c9aa3268f8ace206c94520361\workspace\transformed\material3-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0015923b6b98ab6922dcd4fa36487e09\workspace\transformed\material\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1094b20ea6a644390eea1dc16a5b123a\workspace\transformed\animation-core\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1f1ea4b87d6a104c3d4ac6c0d7c2757b\workspace\transformed\material-ripple\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c214a77cf110a7ff32ccb784cbfa9563\workspace\transformed\animation\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f27be058ac1df1b281320a7c67a69b6d\workspace\transformed\foundation-layout\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\58db2e8131797fa2ee6e38dc887e0264\workspace\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5c55a52dbc90a5b27cc8357199b08238\workspace\transformed\ui-tooling-data\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\17b68b22e2373093e9a5ae93a5462541\workspace\transformed\ui-unit\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0a4a0ad318717bfb12ff9e7a89410303\workspace\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6fd032279dffdf58656ea4f54d434094\workspace\transformed\ui-geometry\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\81ec85113e16f956426e5ff03e0634ec\workspace\transformed\ui-util\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\99a61f8c4386106d1e7ed6195b786d38\workspace\transformed\ui-text\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\16b2a966ba6b298af066e04bbbbf5334\workspace\transformed\ui-tooling-preview\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b0f8a15bf6e41746006ed58fbe7d102a\workspace\transformed\material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\3c3678773b47053204ba2ab70c0f2523\workspace\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ded95261ccd74ac450cb2a48bcc3c149\workspace\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ca2363e72c607d354754ac1aef1ec7bf\workspace\transformed\activity-ktx-1.11.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5939c465a603f6bd5399f99c9c4626f2\workspace\transformed\activity-1.11.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\eff65b78b5452b914206fbe9748384ee\workspace\transformed\activity-compose-1.11.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ae1c4718dbd3be3e7e99481e76c5bfc4\workspace\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f49001ab39201434fb8b059d883b25dc\workspace\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c3015f5e05747d4e66a717ec63717d95\workspace\transformed\runtime-annotation\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\81f66e3312302a7352ec2d9ee8a01d2b\workspace\transformed\savedstate-ktx-1.3.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4b9b78333978fe281764dc19aebce3e8\workspace\transformed\savedstate-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\06343ec81beea4e4e1ace79e132cb2c2\workspace\transformed\savedstate-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4438876d08bea6d6e43cefa6022de72b\workspace\transformed\runtime\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1672710e7a41dae977211a6edba0fca2\workspace\transformed\runtime-saveable\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\43ee132613470db4928896f42ea402b2\workspace\transformed\lifecycle-livedata-core-2.9.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6a55f490a8ba24d66ff8834b7f48bda0\workspace\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4e390cdf8ec5894ec8a2527656738b24\workspace\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c4705cb547d95a532109c771b1fe29cb\workspace\transformed\lifecycle-viewmodel-savedstate-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ca3d72d6b8b95e04d0abb81b1e0f623e\workspace\transformed\core-ktx-1.15.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\87c1045f6ba9f2ce562c05f5bb136fc4\workspace\transformed\graphics-path-1.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\13eb198d70f92bad08ee4704b47211da\workspace\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5def65ef2d06839b7c5090a35d4f837d\workspace\transformed\lifecycle-viewmodel-ktx-2.9.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\df1977a8645fe8754283615f27471f3a\workspace\transformed\lifecycle-runtime-ktx\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f3f7b2b771edc66ec0ec1e260bed88e4\workspace\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\44030ffd943d1b21eea04a2423630670\workspace\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b32baa931d8fb24933988cc37e4163cf\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5dd72b96cfbf7f14db4975428672c481\workspace\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\2c7b12f1cb8560e163d6eac20fe1f404\workspace\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\d381df770afbb0d7d9b3020656057e62\workspace\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:3:5-16:19
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:3:5-16:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b32baa931d8fb24933988cc37e4163cf\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b32baa931d8fb24933988cc37e4163cf\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:6:9-35
+	android:label
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:5:9-33
+	android:allowBackup
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:4:9-35
+	android:theme
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:7:9-72
+activity#com.example.listyar.MainActivity
+ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:8:9-15:20
+	android:exported
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:10:13-36
+	android:name
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:9:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:11:13-14:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:13:17-77
+	android:name
+		ADDED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml:13:27-74
+uses-sdk
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+MERGED from [androidx.compose.material3:material3-android:1.3.2] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6077316c9aa3268f8ace206c94520361\workspace\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.2] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6077316c9aa3268f8ace206c94520361\workspace\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0015923b6b98ab6922dcd4fa36487e09\workspace\transformed\material\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0015923b6b98ab6922dcd4fa36487e09\workspace\transformed\material\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1094b20ea6a644390eea1dc16a5b123a\workspace\transformed\animation-core\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1094b20ea6a644390eea1dc16a5b123a\workspace\transformed\animation-core\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1f1ea4b87d6a104c3d4ac6c0d7c2757b\workspace\transformed\material-ripple\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1f1ea4b87d6a104c3d4ac6c0d7c2757b\workspace\transformed\material-ripple\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c214a77cf110a7ff32ccb784cbfa9563\workspace\transformed\animation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c214a77cf110a7ff32ccb784cbfa9563\workspace\transformed\animation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f27be058ac1df1b281320a7c67a69b6d\workspace\transformed\foundation-layout\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f27be058ac1df1b281320a7c67a69b6d\workspace\transformed\foundation-layout\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\58db2e8131797fa2ee6e38dc887e0264\workspace\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\58db2e8131797fa2ee6e38dc887e0264\workspace\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5c55a52dbc90a5b27cc8357199b08238\workspace\transformed\ui-tooling-data\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5c55a52dbc90a5b27cc8357199b08238\workspace\transformed\ui-tooling-data\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\17b68b22e2373093e9a5ae93a5462541\workspace\transformed\ui-unit\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\17b68b22e2373093e9a5ae93a5462541\workspace\transformed\ui-unit\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0a4a0ad318717bfb12ff9e7a89410303\workspace\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0a4a0ad318717bfb12ff9e7a89410303\workspace\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6fd032279dffdf58656ea4f54d434094\workspace\transformed\ui-geometry\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6fd032279dffdf58656ea4f54d434094\workspace\transformed\ui-geometry\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\81ec85113e16f956426e5ff03e0634ec\workspace\transformed\ui-util\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\81ec85113e16f956426e5ff03e0634ec\workspace\transformed\ui-util\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\99a61f8c4386106d1e7ed6195b786d38\workspace\transformed\ui-text\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\99a61f8c4386106d1e7ed6195b786d38\workspace\transformed\ui-text\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\16b2a966ba6b298af066e04bbbbf5334\workspace\transformed\ui-tooling-preview\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\16b2a966ba6b298af066e04bbbbf5334\workspace\transformed\ui-tooling-preview\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b0f8a15bf6e41746006ed58fbe7d102a\workspace\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.8] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b0f8a15bf6e41746006ed58fbe7d102a\workspace\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\3c3678773b47053204ba2ab70c0f2523\workspace\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.8] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\3c3678773b47053204ba2ab70c0f2523\workspace\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ded95261ccd74ac450cb2a48bcc3c149\workspace\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ded95261ccd74ac450cb2a48bcc3c149\workspace\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ca2363e72c607d354754ac1aef1ec7bf\workspace\transformed\activity-ktx-1.11.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ca2363e72c607d354754ac1aef1ec7bf\workspace\transformed\activity-ktx-1.11.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5939c465a603f6bd5399f99c9c4626f2\workspace\transformed\activity-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5939c465a603f6bd5399f99c9c4626f2\workspace\transformed\activity-1.11.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\eff65b78b5452b914206fbe9748384ee\workspace\transformed\activity-compose-1.11.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.11.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\eff65b78b5452b914206fbe9748384ee\workspace\transformed\activity-compose-1.11.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ae1c4718dbd3be3e7e99481e76c5bfc4\workspace\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ae1c4718dbd3be3e7e99481e76c5bfc4\workspace\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f49001ab39201434fb8b059d883b25dc\workspace\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f49001ab39201434fb8b059d883b25dc\workspace\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c3015f5e05747d4e66a717ec63717d95\workspace\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c3015f5e05747d4e66a717ec63717d95\workspace\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\81f66e3312302a7352ec2d9ee8a01d2b\workspace\transformed\savedstate-ktx-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\81f66e3312302a7352ec2d9ee8a01d2b\workspace\transformed\savedstate-ktx-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4b9b78333978fe281764dc19aebce3e8\workspace\transformed\savedstate-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4b9b78333978fe281764dc19aebce3e8\workspace\transformed\savedstate-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\06343ec81beea4e4e1ace79e132cb2c2\workspace\transformed\savedstate-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\06343ec81beea4e4e1ace79e132cb2c2\workspace\transformed\savedstate-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4438876d08bea6d6e43cefa6022de72b\workspace\transformed\runtime\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4438876d08bea6d6e43cefa6022de72b\workspace\transformed\runtime\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1672710e7a41dae977211a6edba0fca2\workspace\transformed\runtime-saveable\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\1672710e7a41dae977211a6edba0fca2\workspace\transformed\runtime-saveable\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\43ee132613470db4928896f42ea402b2\workspace\transformed\lifecycle-livedata-core-2.9.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\43ee132613470db4928896f42ea402b2\workspace\transformed\lifecycle-livedata-core-2.9.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6a55f490a8ba24d66ff8834b7f48bda0\workspace\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\6a55f490a8ba24d66ff8834b7f48bda0\workspace\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4e390cdf8ec5894ec8a2527656738b24\workspace\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4e390cdf8ec5894ec8a2527656738b24\workspace\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c4705cb547d95a532109c771b1fe29cb\workspace\transformed\lifecycle-viewmodel-savedstate-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\c4705cb547d95a532109c771b1fe29cb\workspace\transformed\lifecycle-viewmodel-savedstate-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ca3d72d6b8b95e04d0abb81b1e0f623e\workspace\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\ca3d72d6b8b95e04d0abb81b1e0f623e\workspace\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\87c1045f6ba9f2ce562c05f5bb136fc4\workspace\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\87c1045f6ba9f2ce562c05f5bb136fc4\workspace\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\13eb198d70f92bad08ee4704b47211da\workspace\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\13eb198d70f92bad08ee4704b47211da\workspace\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5def65ef2d06839b7c5090a35d4f837d\workspace\transformed\lifecycle-viewmodel-ktx-2.9.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5def65ef2d06839b7c5090a35d4f837d\workspace\transformed\lifecycle-viewmodel-ktx-2.9.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\df1977a8645fe8754283615f27471f3a\workspace\transformed\lifecycle-runtime-ktx\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\df1977a8645fe8754283615f27471f3a\workspace\transformed\lifecycle-runtime-ktx\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f3f7b2b771edc66ec0ec1e260bed88e4\workspace\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\f3f7b2b771edc66ec0ec1e260bed88e4\workspace\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\44030ffd943d1b21eea04a2423630670\workspace\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\44030ffd943d1b21eea04a2423630670\workspace\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b32baa931d8fb24933988cc37e4163cf\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\b32baa931d8fb24933988cc37e4163cf\workspace\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5dd72b96cfbf7f14db4975428672c481\workspace\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\5dd72b96cfbf7f14db4975428672c481\workspace\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\2c7b12f1cb8560e163d6eac20fe1f404\workspace\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\2c7b12f1cb8560e163d6eac20fe1f404\workspace\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\d381df770afbb0d7d9b3020656057e62\workspace\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\d381df770afbb0d7d9b3020656057e62\workspace\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Parsa\AndroidStudioProjects\Listyar\app\src\main\AndroidManifest.xml
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.9.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\60d7262b0fcbf59a0f1b19fce6bf332a\workspace\transformed\ui-tooling\AndroidManifest.xml:24:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\868bdc52610cc51f1dd850fe38be70b5\workspace\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\4620bf69a6b258eefc0f487dab77dcc0\workspace\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.3] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\205677acf5985fc903aedc7268906679\workspace\transformed\lifecycle-process-2.9.3\AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+permission#com.example.listyar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.listyar.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\0151e0bc01c256b409040e145f3ca9e0\workspace\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\Parsa\.gradle\caches\9.3.0\transforms\86f178af4d0ba5bd2bc84ac798ed0739\workspace\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
