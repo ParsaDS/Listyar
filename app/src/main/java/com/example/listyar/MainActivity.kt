@@ -250,7 +250,7 @@ private fun ListyarApp() {
         Card(Modifier.fillMaxWidth()){Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(9.dp)){
             Text("لوله‌ها و اتصالات",style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.SemiBold)
             pipes.forEach{p->
-                OutlinedButton({onSelect(if(selected==p.name)null else p.name)},Modifier.fillMaxWidth()){Text(p.name+" · "+p.sizes.size+" سایز · "+p.fittings.size+" اتصال")}
+                OutlinedButton({onSelect(if(selected==p.name) "" else p.name)},Modifier.fillMaxWidth()){Text(p.name+" · "+p.sizes.size+" سایز · "+p.fittings.size+" اتصال")}
                 if(selected==p.name){
                     OutlinedTextField(editName,{editName=it},Modifier.fillMaxWidth(),label={Text("نام نوع لوله")},singleLine=true)
                     OutlinedTextField(editSizes,{editSizes=it},Modifier.fillMaxWidth(),label={Text("سایزها با ویرگول")})
