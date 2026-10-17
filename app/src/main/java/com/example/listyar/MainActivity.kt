@@ -204,7 +204,7 @@ private fun ListyarApp() {
 @Composable private fun Drop(label:String,selected:String,options:List<String>,onSelect:(String)->Unit){
     var expanded by remember(label){mutableStateOf(false)}
     Column{
-        OutlinedTextField(selected,{},{},label={Text(label)},readOnly=true,modifier=Modifier.fillMaxWidth().clickable{expanded=true},singleLine=true)
+        OutlinedTextField(value=selected,onValueChange={},readOnly=true,label={Text(label)},modifier=Modifier.fillMaxWidth().clickable{expanded=true},singleLine=true)
         DropdownMenu(expanded,{expanded=false}){options.forEach{v->DropdownMenuItem(text={Text(v)},onClick={onSelect(v);expanded=false})}}
     }
 }
