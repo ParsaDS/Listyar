@@ -11,6 +11,8 @@ A native Android plumbing-supplies list app built with Kotlin and Jetpack Compos
 - Local relational SQLite storage for projects, items, pipe types, sizes and fittings
 - One-time migration of existing saved lists and catalog from the previous SharedPreferences JSON storage
 - JSON backup export and validated restore/import, with confirmation before replacing existing data
+- Short SMS-ready text copy including fitting type, pipe type, size and quantity
+- Share list text or generate and share a clean JPG image with project name, address and date
 - No account, server or internet connection required for normal use
 
 ## Open in Android Studio
