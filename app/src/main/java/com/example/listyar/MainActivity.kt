@@ -273,7 +273,7 @@ private fun ListyarApp() {
     var pendingBackup by remember { mutableStateOf<ListyarBackup?>(null) }
     val exportLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
         if (uri != null) try {
-            val output = context.contentResolver.openOutputStream(uri) ?: error("امکان نوشتن فایل وجود ندارد.")
+            val output = context.contentResolver.openOutputStream(uri) ?: throw IllegalStateException("امکان نوشتن فایل وجود ندارد.")
             output.bufferedWriter(Charsets.UTF_8).use { it.write(exportBackup(context)) }
             Toast.makeText(context, "فایل پشتیبان ذخیره شد.", Toast.LENGTH_LONG).show()
         } catch (e: Exception) { onError("ذخیره پشتیبان انجام نشد: ${e.message ?: "خطای نامشخص"}") }
@@ -281,7 +281,7 @@ private fun ListyarApp() {
     val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri != null) try {
             val json = context.contentResolver.openInputStream(uri)?.bufferedReader(Charsets.UTF_8)?.use { it.readText() }
-                ?: error("فایل قابل خواندن نیست.")
+                ?: throw IllegalStateException("فایل قابل خواندن نیست.")
             pendingBackup = parseBackup(json)
             onError("")
         } catch (e: Exception) {
