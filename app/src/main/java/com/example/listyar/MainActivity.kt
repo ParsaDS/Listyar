@@ -1,9 +1,12 @@
 package com.example.listyar
 
 import android.content.Context
+import android.widget.Toast
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
@@ -22,19 +25,16 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import org.json.JSONArray
-import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import java.util.UUID
 
-private data class Fitting(val name: String, val sizes: List<String>)
-private data class Pipe(val name: String, val sizes: List<String>, val fittings: List<Fitting>)
-private data class Item(val pipe: String, val fitting: String, val size: String, val quantity: String)
-private data class SavedList(val id: String, val project: String, val address: String, val date: String, val type: String, val items: List<Item>)
+internal data class Fitting(val name: String, val sizes: List<String>)
+internal data class Pipe(val name: String, val sizes: List<String>, val fittings: List<Fitting>)
+internal data class Item(val pipe: String, val fitting: String, val size: String, val quantity: String)
+internal data class SavedList(val id: String, val project: String, val address: String, val date: String, val type: String, val items: List<Item>)
 
-private fun defaults() = listOf(
+internal fun defaults() = listOf(
     Pipe("سفید", listOf("20","25","32","40","50","60"), listOf("زانو ۴۵ درجه","زانو ۹۰ درجه","سه راهی","بوشن","تبدیل").map { Fitting(it,listOf("20","25","32","40","50","60")) }),
     Pipe("پلیکا", listOf("40","63","110","125"), listOf("زانو ۹۰ درجه","زانو ۴۵ درجه","بوشن (سوکت)","سه راهی").map { Fitting(it,listOf("40","63","110","125")) }),
     Pipe("نیو پایپ", listOf("16","20","25","32"), listOf("زانو","سه راه","تبدیل","رابط").map { Fitting(it,listOf("16","20","25","32")) })
@@ -147,7 +147,8 @@ private fun ListyarApp() {
                     {old,n,s -> val i=pipes.indexOfFirst{it.name==old};if(i>=0&&n.isNotBlank()&&s.isNotEmpty()){pipes[i]=pipes[i].copy(name=n.trim(),sizes=s,fittings=pipes[i].fittings.map{f->f.copy(sizes=s)});if(pipeName==old)choosePipe(n.trim());writePipes(context,pipes);managePipe=n.trim()}},
                     {name,f -> val i=pipes.indexOfFirst{it.name==name};if(i>=0&&f.isNotBlank()&&pipes[i].fittings.none{it.name==f.trim()}){pipes[i]=pipes[i].copy(fittings=pipes[i].fittings+Fitting(f.trim(),pipes[i].sizes));writePipes(context,pipes);newFitting=""}},
                     {name,f -> val i=pipes.indexOfFirst{it.name==name};if(i>=0){pipes[i]=pipes[i].copy(fittings=pipes[i].fittings.filterNot{it.name==f});writePipes(context,pipes)}},
-                    {name -> pipes.removeAll{it.name==name};writePipes(context,pipes);if(pipeName==name)choosePipe(pipes.firstOrNull()?.name?:"");managePipe=""},message,{message=it})
+                    {name -> pipes.removeAll{it.name==name};writePipes(context,pipes);if(pipeName==name)choosePipe(pipes.firstOrNull()?.name?:"");managePipe=""},message,{message=it},
+                    { backup -> importBackup(context,backup); lists.clear(); lists.addAll(backup.lists); pipes.clear(); pipes.addAll(backup.pipes); managePipe=""; message="پشتیبان با موفقیت بازیابی شد." })
                 else -> HomePage(Modifier.padding(pad),lists.size,{newList()},{tab=0;page="lists"})
             }
         }
@@ -267,7 +268,27 @@ private fun ListyarApp() {
     }
 }
 
-@Composable private fun SettingsPage(m:Modifier,theme:String,onTheme:(String)->Unit,pipes:List<Pipe>,selected:String?,onSelect:(String)->Unit,newName:String,onNewName:(String)->Unit,newSizes:String,onNewSizes:(String)->Unit,newFitting:String,onNewFitting:(String)->Unit,onAddPipe:()->Unit,onEditPipe:(String,String,List<String>)->Unit,onAddFitting:(String,String)->Unit,onDeleteFitting:(String,String)->Unit,onDeletePipe:(String)->Unit,error:String,onError:(String)->Unit){
+@Composable private fun SettingsPage(m:Modifier,theme:String,onTheme:(String)->Unit,pipes:List<Pipe>,selected:String?,onSelect:(String)->Unit,newName:String,onNewName:(String)->Unit,newSizes:String,onNewSizes:(String)->Unit,newFitting:String,onNewFitting:(String)->Unit,onAddPipe:()->Unit,onEditPipe:(String,String,List<String>)->Unit,onAddFitting:(String,String)->Unit,onDeleteFitting:(String,String)->Unit,onDeletePipe:(String)->Unit,error:String,onError:(String)->Unit,onBackupImport:(ListyarBackup)->Unit){
+    val context = LocalContext.current
+    var pendingBackup by remember { mutableStateOf<ListyarBackup?>(null) }
+    val exportLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+        if (uri != null) try {
+            val output = context.contentResolver.openOutputStream(uri) ?: error("امکان نوشتن فایل وجود ندارد.")
+            output.bufferedWriter(Charsets.UTF_8).use { it.write(exportBackup(context)) }
+            Toast.makeText(context, "فایل پشتیبان ذخیره شد.", Toast.LENGTH_LONG).show()
+        } catch (e: Exception) { onError("ذخیره پشتیبان انجام نشد: ${e.message ?: "خطای نامشخص"}") }
+    }
+    val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) try {
+            val json = context.contentResolver.openInputStream(uri)?.bufferedReader(Charsets.UTF_8)?.use { it.readText() }
+                ?: error("فایل قابل خواندن نیست.")
+            pendingBackup = parseBackup(json)
+            onError("")
+        } catch (e: Exception) {
+            pendingBackup = null
+            onError(e.message ?: "فایل پشتیبان معتبر نیست.")
+        }
+    }
     var editName by remember(selected){mutableStateOf(selected.orEmpty())}
     var editSizes by remember(selected,pipes){mutableStateOf(pipes.firstOrNull{it.name==selected}?.sizes?.joinToString(", ").orEmpty())}
     Column(m.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp),verticalArrangement=Arrangement.spacedBy(12.dp)){
@@ -275,6 +296,13 @@ private fun ListyarApp() {
         Card(Modifier.fillMaxWidth()){Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(6.dp)){
             Text("تم برنامه",style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.SemiBold)
             listOf("روشن" to "light","تاریک" to "dark","مطابق سیستم" to "system").forEach{(label,v)->Row(Modifier.fillMaxWidth().clickable{onTheme(v)},horizontalArrangement=Arrangement.SpaceBetween){Text(label);RadioButton(theme==v,{onTheme(v)})}}
+        }}
+        Card(Modifier.fillMaxWidth()){Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(9.dp)){
+            Text("پشتیبان‌گیری و بازیابی",style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.SemiBold)
+            Text("یک فایل JSON از لیست‌ها و کاتالوگ لوله‌ها بساز تا بتوانی آن را نگه داری یا به دستگاه دیگری منتقل کنی.",style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            Button({ exportLauncher.launch("listyar-backup.json") },Modifier.fillMaxWidth()){Text("خروجی گرفتن از پشتیبان")}
+            OutlinedButton({ importLauncher.launch(arrayOf("application/json","text/json","text/plain")) },Modifier.fillMaxWidth()){Text("بازیابی از فایل پشتیبان")}
+            Text("بازیابی، لیست‌ها و کاتالوگ فعلی را با اطلاعات فایل جایگزین می‌کند.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
         }}
         Card(Modifier.fillMaxWidth()){Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(9.dp)){
             Text("لوله‌ها و اتصالات",style=MaterialTheme.typography.titleMedium,fontWeight=FontWeight.SemiBold)
@@ -298,16 +326,18 @@ private fun ListyarApp() {
             if(error.isNotBlank())Text(error,color=MaterialTheme.colorScheme.error)
         }}
     }
+    val backupToConfirm = pendingBackup
+    if (backupToConfirm != null) {
+        AlertDialog(
+            onDismissRequest = { pendingBackup = null },
+            title = { Text("بازیابی پشتیبان") },
+            text = { Text("با ادامه، ${backupToConfirm.lists.size} لیست و ${backupToConfirm.pipes.size} نوع لوله از فایل وارد می‌شود و اطلاعات فعلی جایگزین خواهد شد. قبل از ادامه مطمئن شو فایل درست است.") },
+            confirmButton = { TextButton(onClick = { onBackupImport(backupToConfirm); pendingBackup = null }) { Text("جایگزینی اطلاعات") } },
+            dismissButton = { TextButton(onClick = { pendingBackup = null }) { Text("انصراف") } }
+        )
+    }
 }
 
 private fun parseSizes(s:String)=s.split(',', '،',';','؛',' ','\n').map{it.trim()}.filter{it.isNotBlank()}.distinct()
 private fun today()=SimpleDateFormat("yyyy/MM/dd",Locale.US).format(Date())
 
-private fun readPipes(c:Context):List<Pipe> = try{
-    val raw=c.getSharedPreferences("listyar_data",0).getString("catalog",null)
-    if(raw.isNullOrBlank())defaults() else {val a=JSONArray(raw);buildList{for(i in 0 until a.length()){val o=a.getJSONObject(i);val sz=o.optJSONArray("sizes").strings();val fs=o.optJSONArray("fittings")?:JSONArray();val f=buildList{for(j in 0 until fs.length()){val x=fs.getJSONObject(j);add(Fitting(x.optString("name"),x.optJSONArray("sizes").strings().ifEmpty{sz}))}};add(Pipe(o.optString("name"),sz,f))}}}
-}catch(_:Exception){defaults()}
-private fun writePipes(c:Context,pipes:List<Pipe>){val a=JSONArray();pipes.forEach{p->val f=JSONArray();p.fittings.forEach{x->f.put(JSONObject().put("name",x.name).put("sizes",JSONArray(x.sizes)))};a.put(JSONObject().put("name",p.name).put("sizes",JSONArray(p.sizes)).put("fittings",f))};c.getSharedPreferences("listyar_data",0).edit().putString("catalog",a.toString()).apply()}
-private fun JSONArray?.strings():List<String>{val a=this?:return emptyList();return buildList{for(i in 0 until a.length())add(a.optString(i))}}
-private fun readLists(c:Context):List<SavedList> = try{val a=JSONArray(c.getSharedPreferences("listyar_data",0).getString("saved_lists","[]")?: "[]");buildList{for(i in 0 until a.length()){val o=a.getJSONObject(i);val ia=o.optJSONArray("items")?:JSONArray();val items=buildList{for(j in 0 until ia.length()){val x=ia.getJSONObject(j);add(Item(x.optString("pipeType"),x.optString("fitting"),x.optString("size"),x.optString("quantity")))}};add(SavedList(o.optString("id",UUID.randomUUID().toString()),o.optString("projectName"),o.optString("address"),o.optString("date"),o.optString("listType"),items))}}}catch(_:Exception){emptyList()}
-private fun writeLists(c:Context,lists:List<SavedList>){val a=JSONArray();lists.forEach{l->val items=JSONArray();l.items.forEach{x->items.put(JSONObject().put("pipeType",x.pipe).put("fitting",x.fitting).put("size",x.size).put("quantity",x.quantity))};a.put(JSONObject().put("id",l.id).put("projectName",l.project).put("address",l.address).put("date",l.date).put("listType",l.type).put("items",items))};c.getSharedPreferences("listyar_data",0).edit().putString("saved_lists",a.toString()).apply()}
